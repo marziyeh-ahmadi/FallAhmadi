@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Button buttonFaal = findViewById(R.id.buttonFaal);
-        Button buttonPoetList= findViewById(R.id.buttonPoetList);
+        Button buttonPoetList = findViewById(R.id.buttonPoetList);
 
         buttonFaal.setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, FaaIPreActivity.class);
@@ -25,8 +25,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
         buttonPoetList.setOnClickListener(v -> {
-//            Intent intent = new Intent(MainActivity.this,);
-//            startActivity(intent);
+            Intent intent = new Intent(MainActivity.this, PoetListActivity.class);
+            startActivity(intent);
         });
     }
 
