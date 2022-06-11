@@ -1,18 +1,19 @@
 package com.example.fall.retrofit.api_interface;
 
-import com.example.fall.retrofit.response.GetResponse;
+import com.example.fall.retrofit.response.Faal;
+import com.example.fall.retrofit.response.Poet;
 
-import okhttp3.RequestBody;
+import java.util.List;
+
 import retrofit2.Call;
-import retrofit2.http.Multipart;
-import retrofit2.http.POST;
-import retrofit2.http.Part;
+import retrofit2.http.GET;
 
 public interface ApiInterface {
 
-    @Multipart
-    @POST("get.php")
-    Call<GetResponse> get(
-            @Part("email") RequestBody email, @Part("password") RequestBody password
-    );
+
+    @GET("hafez/faal")
+    Call<Faal> showFaal();
+
+    @GET("poets")
+    Call<List<Poet>> getPoetList();
 }

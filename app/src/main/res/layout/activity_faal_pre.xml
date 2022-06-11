@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <ImageView
@@ -12,37 +11,31 @@
         android:scaleType="centerCrop"
         android:src="@drawable/main_background" />
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical">
         <ImageView
-            android:layout_marginBottom="120dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:scaleType="centerCrop"
             android:src="@drawable/hafez" />
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/buttonFaal"
-            android:layout_width="230dp"
-            android:layout_height="90dp"
-            android:background="@drawable/button"
-            android:text="فال حافظ"
-            android:textColor="@color/purple_700"
-            android:textSize="22sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="40dp"
+            android:gravity="center"
+            android:text="ای حافظ شیرازی!\n تو محرم هر رازی!\n تو را به خدا و به شاخ نباتت قسم می دهم که هر چه صلاح و مصلحت می بینی برایم آشکار و آرزوی مرا براورده سازی"
+            android:textSize="20sp" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/buttonPoetList"
-            android:layout_width="230dp"
-            android:layout_height="90dp"
-            android:background="@drawable/button"
-            android:text="زندگی نامه شاعران"
+            android:id="@+id/buttonFaal"
+            android:layout_width="250dp"
+            android:layout_height="100dp"
+            android:background="@drawable/button_2"
             android:textColor="@color/purple_700"
-            android:textSize="22sp" />
+            android:textSize="20sp" />
     </LinearLayout>
 
 </RelativeLayout>

@@ -23,16 +23,13 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiClient {
-    public static final String BASE_URL = "https://";
-    public static Retrofit retrofit = null;
+    public static final String BASE_URL = "https://ganjgah.ir/api/ganjoor/";
 
+    public static Retrofit retrofit = null;
 
     public static Retrofit getClient(Context mContext) {
         if (retrofit == null) {
-            Gson gson = new GsonBuilder()
-                    .setLenient()
-                    .setDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
-                    .create();
+            Gson gson = new GsonBuilder().create();
 
             ConnectivityInterceptor connectivityInterceptor = new ConnectivityInterceptor(mContext);
 
@@ -53,10 +50,6 @@ public class ApiClient {
                     .build();
         }
         return retrofit;
-    }
-
-    public static void clearPrevClient() {
-        retrofit = null;
     }
 
     public static OkHttpClient.Builder getUnsafeOkHttpClient() {
